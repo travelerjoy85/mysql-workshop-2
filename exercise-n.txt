@@ -94,3 +94,9 @@ Exercise 5:
 Delete all data from decodemtl_addressbook.Entry without using a DELETE statement
 Answer:
 truncate.Entry;
+
+
+Exercise 6:
+Delete decodemtl_addressbook.Account and all associated date
+Answer:
+DELETE FROM Entry;
