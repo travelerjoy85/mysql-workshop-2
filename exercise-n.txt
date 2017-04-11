@@ -88,3 +88,9 @@ UPDATE Entry
                     end),
         subtype = 'phone'
     WHERE id IN (1, 2, 3);
+    
+
+Exercise 5:
+Delete all data from decodemtl_addressbook.Entry without using a DELETE statement
+Answer:
+truncate.Entry;
