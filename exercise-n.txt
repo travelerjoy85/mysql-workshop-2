@@ -174,5 +174,10 @@ Answer: 2800
 How many Address Book Entries are listed as either home or work?
 Query: SELECT COUNT(*) FROM Entry WHERE type="home" OR type="work";
 
+Question 3:
+How many Address Book Entries are listed as phones?
+Answer: 600
+Query: SELECT COUNT(*) FROM Entry WHERE subtype="phone";
+
 
 
