@@ -3,6 +3,7 @@ STEP 1:
 	use decodemtl_addressbook // to switch to this database
 STEP 2:
 	SOURCE data/import-table-structure.sql // to import the data from the source required to database: data/import-table-structure.sql
+
 	
 Exercise 2:
 
@@ -57,3 +58,33 @@ Query Used:
 VALUES ('...', '...', '...'),
 	   ('...', '...', '...'),
 	   ('...', '...', '...');
+	   
+
+Exercise 3:
+
+Question 1:
+Retrieve data from the previously inserted decodemtl_addressbook.Account row
+Query Used:
+SELECT * FROM + tableName;
+
+Note: I realized that I did a mistake in Exercise 2 where it required me to insert only 1 row, but I copied 10 rows into my table.
+So I have to delete the rest rows using query: DELETE FROM + tableName WHERE id BETWEEN "number" AND "number";
+
+
+Exercise 4:
+
+Question 1 - Question 3:
+
+Answer:
+
+For table Account and AddressBook that only contain 1 row, my queries are as below:
+UPDATE "tableName" SET "key"="JoyEatTheWorld.corp" WHERE accountId=82;
+
+For table Entry that contains multiple rows, my query is as below:
+UPDATE Entry
+    SET firstName = (case when addressBookId = 52 then 'Joy'
+                         when addressBookId = 96 then 'Yumi'
+                         when addressBookId = 43 then 'Izzie'
+                    end),
+        subtype = 'phone'
+    WHERE id IN (1, 2, 3);
