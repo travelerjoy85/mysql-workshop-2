@@ -162,3 +162,17 @@ Query: SELECT MIN(birthday) FROM Entry;
 And to display the whole row:
 SELECT * FROM Entry WHERE birthday="1945-09-02 09:21:58";
 
+
+Exercise 11
+Question 1: 
+Answer: 2800
+How many Address Book Entries are not listed as other?
+Query: SELECT COUNT(*) FROM Entry WHERE type <> "other";
+
+Question 2:
+Answer: 2800
+How many Address Book Entries are listed as either home or work?
+Query: SELECT COUNT(*) FROM Entry WHERE type="home" OR type="work";
+
+
+
