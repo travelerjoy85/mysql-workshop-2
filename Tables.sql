@@ -1,0 +1,15 @@
+CREATE TABLE Account (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(100),
+	password VARCHAR(100),
+	createdOn DATETIME,
+	modifiedOn DATETIME
+);
+
+CREATE TABLE AddressBook (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	accountId INT,
+	name VARCHAR(100),
+	createdOn DATETIME,
+	modifiedOn DATETIME
+);

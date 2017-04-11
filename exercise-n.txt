@@ -3,3 +3,34 @@ STEP 1:
 	use decodemtl_addressbook // to switch to this database
 STEP 2:
 	SOURCE data/import-table-structure.sql // to import the data from the source required to database: data/import-table-structure.sql
+	
+Exercise 2:
+
+Question 1:
+Insert one row into decodemtl_addressbook.Account
+Query Used:
+1. drop table if exists Account; // to drop the previous table just to set a new table that has the same keys as the data imported
+2. CREATE TABLE Account (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(100),
+	password VARCHAR(100),
+	createdOn DATETIME,
+	modifiedOn DATETIME
+	);
+	// to create a new table
+3. INSERT INTO 'Account' ('...', '...') VALUE ('...', '...');
+
+Question 2:
+Insert one row into decodemtl_addressbook.AddressBook
+Query Used:
+1. ALTER TABLE decodemtl_addressbook.AddressBook; // switch from the previous table to this table
+2. drop table if exists Account; // to drop the previous table just to set a new table that has the same keys as the data imported
+3. CREATE TABLE AddressBook (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	accountId INT,
+	name VARCHAR(100),
+	createdOn DATETIME,
+	modifiedOn DATETIME
+	);
+	// to create a new table
+2. INSERT INTO 'AddressBook' ('...', '...') VALUE ('...', '...');
