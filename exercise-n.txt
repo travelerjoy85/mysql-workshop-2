@@ -100,3 +100,12 @@ Exercise 6:
 Delete decodemtl_addressbook.Account and all associated date
 Answer:
 drop table if exists Account;
+
+
+Exercise 7:
+Question1:
+Import Database Schema from the following source file into decodemtl_addressbook_import:
+data/import-table-structure.sql
+Answer:
+step 1: use decodemtl_addressbook_import // switch to database: decodemtl_addressbook_import
+step 2: SOURCE data/import-table-structure.sql;
