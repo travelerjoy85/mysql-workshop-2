@@ -99,4 +99,4 @@ truncate.Entry;
 Exercise 6:
 Delete decodemtl_addressbook.Account and all associated date
 Answer:
-DELETE FROM Entry;
+drop table if exists Account;
