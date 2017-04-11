@@ -1,0 +1,5 @@
+Exercise 1:
+STEP 1:
+	use decodemtl_addressbook // to switch to this database
+STEP 2:
+	SOURCE data/import-table-structure.sql // to import the data from the source required to database: data/import-table-structure.sql
