@@ -118,3 +118,26 @@ data/import-entry.sql
 
 Comment: For this one, I tried to find a way that can import those three files into the db all at once,
 I tried using cat "...sql", "...sql"...it doesn't work. So I had to do SOURCE 3 times.
+
+
+Exercise 8:
+Question1:
+What is the email of the Account identified by "63"?
+Answer:
+SELECT email FROM Account WHERE id=63;
+
+Question2:
+What are the names of the AdressBooks belonging to accountId "3"?
+Answer:
+SELECT name FROM AddressBook WHERE accountId=3;
+
+Question3:
+On which date was the AddressBook titled "Lorem Foundation" created?
+Answer:
+SELECT createdOn FROM AddressBook WHERE name="Lorem Foundation";
+
+
+Exercise 9
+How many Accounts exist? -1000 SELECT COUNT(*) FROM Account;
+How many Address Books exist? -1100 SELECT COUNT(*) FROM AddressBook;
+How many Address Book Entries exist? -4000 SELECT COUNT(*) FROM Entry;
