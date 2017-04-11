@@ -109,3 +109,12 @@ data/import-table-structure.sql
 Answer:
 step 1: use decodemtl_addressbook_import // switch to database: decodemtl_addressbook_import
 step 2: SOURCE data/import-table-structure.sql;
+
+Question2:
+Bulk import data from the following source files into decodemtl_addressbook_import:
+data/import-account.sql
+data/import-addressbook.sql
+data/import-entry.sql
+
+Comment: For this one, I tried to find a way that can import those three files into the db all at once,
+I tried using cat "...sql", "...sql"...it doesn't work. So I had to do SOURCE 3 times.
