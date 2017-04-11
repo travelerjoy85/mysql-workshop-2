@@ -42,3 +42,17 @@ UPDATE Entry
                     end),
         subtype = 'phone'
     WHERE id IN (1, 2, 3);
+
+SELECT count(*) AS totalTables 
+FROM decodemtl_addressbook_import
+WHERE TABLE_SCHEMA = 'Accounts';
+
+
+SELECT
+	a.Id AS AccountId,
+	a.email AS accountEmail,
+	a.password AS accountPassword,
+	a.createdOn AS accountCreateDate,
+	a.modifiedOn AS accountModifiedDate
+FROM
+	CLIENT c LEFT JOIN expenses e ON e.clientId = c.id;

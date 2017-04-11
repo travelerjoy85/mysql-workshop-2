@@ -180,4 +180,28 @@ Answer: 600
 Query: SELECT COUNT(*) FROM Entry WHERE subtype="phone";
 
 
+Exercise 1 from Workshop3:
+Question 1:
+Which Account owns the most Address Books?
+Answer:
+accountId 14 owns the most Address Books, number of address books: 19.
+Query:
+SELECT accountId
+    -> FROM AddressBook
+    -> GROUP BY accountId
+    -> ORDER BY COUNT(*) DESC
+    -> LIMIT 1;
+    
+Question 2:
+Which Address Book contains the most Entries?
+Answer: 
+addressBookId 37 contains the most entries, contains 52 entries in total.
+Query:
+SELECT addressBookId
+    -> FROM Entry
+    -> GROUP BY addressBookId
+    -> ORDER BY COUNT(*) DESC
+    -> LIMIT 1;
+
+
 
