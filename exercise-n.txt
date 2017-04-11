@@ -23,7 +23,7 @@ Query Used:
 Question 2:
 Insert one row into decodemtl_addressbook.AddressBook
 Query Used:
-1. ALTER TABLE decodemtl_addressbook.AddressBook; // switch from the previous table to this table
+1. ALTER TABLE AddressBook; // switch from the previous table to this table
 2. drop table if exists Account; // to drop the previous table just to set a new table that has the same keys as the data imported
 3. CREATE TABLE AddressBook (
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -34,3 +34,26 @@ Query Used:
 	);
 	// to create a new table
 2. INSERT INTO 'AddressBook' ('...', '...') VALUE ('...', '...');
+
+Question 3:
+Insert three rows into decodemtl_addressbook.Entry
+Query Used:
+1. ALTER TABLE Entry; // switch from the previous table to this one
+2. CREATE TABLE Entry (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	addressBookId INT,
+	firstName VARCHAR(100),
+	lastName VARCHAR(100),
+	birthday DATETIME,
+	type ENUM('home', 'work', 'other'),
+	subtype ENUM('phone', 'email', 'address'),
+	contentLineOne VARCHAR(255),
+	contentLineTwo VARCHAR(255),
+	contentLineThree VARCHAR(255),
+	contentLineFour VARCHAR(255),
+	contentLineFive VARCHAR(255)
+);
+3. INSERT INTO Entry ('...', '...', '...')
+VALUES ('...', '...', '...'),
+	   ('...', '...', '...'),
+	   ('...', '...', '...');

@@ -13,3 +13,18 @@ CREATE TABLE AddressBook (
 	createdOn DATETIME,
 	modifiedOn DATETIME
 );
+
+CREATE TABLE Entry (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	addressBookId INT,
+	firstName VARCHAR(100),
+	lastName VARCHAR(100),
+	birthday DATETIME,
+	type ENUM('home', 'work', 'other'),
+	subtype ENUM('phone', 'email', 'address'),
+	contentLineOne VARCHAR(255),
+	contentLineTwo VARCHAR(255),
+	contentLineThree VARCHAR(255),
+	contentLineFour VARCHAR(255),
+	contentLineFive VARCHAR(255)
+);
