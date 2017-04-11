@@ -55,4 +55,24 @@ SELECT
 	a.createdOn AS accountCreateDate,
 	a.modifiedOn AS accountModifiedDate
 FROM
-	CLIENT c LEFT JOIN expenses e ON e.clientId = c.id;
+	AddressBook add LEFT JOIN Account a ON add.accountId = a.id;
+	
+	
+SELECT id
+FROM AddressBook
+GROUP BY id
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+SELECT accountId
+FROM AddressBook
+GROUP BY accountId
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+SELECT addressBookId
+FROM Entry
+GROUP BY addressBookId
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
