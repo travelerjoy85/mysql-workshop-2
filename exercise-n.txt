@@ -141,3 +141,24 @@ Exercise 9
 How many Accounts exist? -1000 SELECT COUNT(*) FROM Account;
 How many Address Books exist? -1100 SELECT COUNT(*) FROM AddressBook;
 How many Address Book Entries exist? -4000 SELECT COUNT(*) FROM Entry;
+
+
+Exercise 10
+Question 1:
+How many Address Book Entries are listed as born before February 12th of 1982?
+Answer: 2687
+SELECT COUNT(*) FROM Entry WHERE birthday < "1982-02-12";
+
+Question 2:
+How many Address Book Entries are listed as born on or after January 1st of 1965?
+Answer: 2597
+SELECT COUNT(*) FROM Entry WHERE birthday >= "1965-01-01";
+
+Question 3:
+Which Address Book Entry is listed as being the oldest of age?
+Answer: 1945-09-02 09:21:58 
+Query: SELECT MIN(birthday) FROM Entry;
+
+And to display the whole row:
+SELECT * FROM Entry WHERE birthday="1945-09-02 09:21:58";
+
